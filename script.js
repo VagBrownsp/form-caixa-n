@@ -313,7 +313,7 @@ function enviarPayloadPorFormulario(payload) {
     const token = payload.requestId;
     const timeout = setTimeout(() => { window.removeEventListener("message", receber); reject(new Error("O envio demorou mais que o esperado. Confira sua conexão e tente novamente.")); }, 120000);
     function receber(event) {
-      if (event.source !== frame.contentWindow || !event.data || event.data.requestId !== token) return;
+      if (!event.data || event.data.requestId !== token) return;
       clearTimeout(timeout); window.removeEventListener("message", receber);
       if (event.data.ok) resolve(event.data); else reject(new Error(event.data.error || "Não foi possível salvar os documentos."));
     }
