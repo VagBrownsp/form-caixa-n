@@ -7,7 +7,7 @@
 /* ---------- 1. Configuração ---------- */
 const DEST = "5512997479192";   // WhatsApp que recebe o resultado (DDI + DDD + número)
 const ENTRADA_MIN = 0.20;       // entrada mínima: 20% do valor do imóvel
-const GAS_URL = "COLE_AQUI_A_URL_DO_WEB_APP_GOOGLE_APPS_SCRIPT";
+const GAS_URL = "https://script.google.com/macros/s/AKfycbyU05icecyAawovqnmVnZRxQ3gNUYFIPKIU6wSgRYxb38resI8hhQdC6bNr4xeDghgc/exec";
 const MAX_TOTAL_BYTES = 10 * 1024 * 1024; // limite total inicial: 10 MB
 const DOCS = [
   { id: "identidade", label: "Documento de identificação" },
